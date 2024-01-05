@@ -11,7 +11,7 @@ import SwiftUI
 struct L10nTokenizerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RealTimeTokenizerView()
         }
     }
 }
