@@ -24,8 +24,7 @@ public struct RealTimeTokenizer {
         
         init() {
             input = ""
-            @Dependency(\.locale) var locale
-            tokenizer = .init(locale) {
+            tokenizer = .init {
                 String(localized: "if")
                 String(localized: "and")
             }

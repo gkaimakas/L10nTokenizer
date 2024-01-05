@@ -55,6 +55,10 @@ public struct RealTimeTokenizerView: View {
     }
 }
 
+#Preview {
+    RealTimeTokenizerView()
+}
+
 public class RealTimeTokenizerViewController: UIHostingController<RealTimeTokenizerView> {
     @MainActor
     public init(_ store: StoreOf<RealTimeTokenizer>) {

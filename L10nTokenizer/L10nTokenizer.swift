@@ -15,15 +15,12 @@ struct LocalizableSeparatorBuilder {
 }
 
 public struct L10nTokenizer {
-    let locale: Locale
     let separators: [String]
     let regex: Regex<AnyRegexOutput>
     
     public init(
-        _ locale: Locale = .current,
         @LocalizableSeparatorBuilder seperators keys: () -> [String]
     ) {
-        self.locale = locale
         self.separators = keys()
         
         let rawCaptures = separators
@@ -42,7 +39,7 @@ public struct L10nTokenizer {
         switch includeToken {
         case true:
             var inputCopy = input
-            var tokens = input
+            let tokens = input
                 .split(separator: regex)
                 .map(String.init)
             var result: [String] = []
