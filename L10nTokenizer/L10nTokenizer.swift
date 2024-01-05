@@ -26,7 +26,9 @@ public struct L10nTokenizer {
         self.locale = locale
         self.separators = keys()
         
-        let rawCaptures = separators.joined(separator: "|")
+        let rawCaptures = separators
+            .map { "\\b\($0)\\b" }
+            .joined(separator: "|")
         self.regex = try! Regex(rawCaptures)
         
     }

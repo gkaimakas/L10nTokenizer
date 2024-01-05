@@ -15,7 +15,7 @@ public struct RealTimeTokenizerView: View {
     
     public var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 32) {
                 Text(store.input)
                     .font(.largeTitle)
                     .multilineTextAlignment(.leading)
